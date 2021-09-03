@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành hàm 1 bài tập 2</title>
+</head>
+<body>
+<h1>Temperature Converter</h1>
+<p>Type a value in the Fahrenheit field to convert the value to Celcius:</p>
+<label for="Fahren">Fahrenheit:</label> <input type="number" id="Fahren" placeholder="Enter Fahrenheit"><br>
+<button onclick="convertTemparature()">Convert</button>
+<p id="result"></p>
+<script>
+    function convertTemparature(fahren) {
+        fahren = parseFloat(document.getElementById("Fahren").value);
+        document.getElementById("result").innerHTML = (fahren - 32) / 1.8;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành mảng 1, bài tập 4</title>
+</head>
+<body>
+<h1>Kiểm tra xem số đó có phải là số nguyên tố không trong 10000 số nguyên đầu tiên</h1>
+<script>
+    function checkPrime(number) {
+        number = parseInt(number);
+        let flag = true;
+        for (let i = 2; i < Math.sqrt(number); i++) {
+            if (number < 2) {
+              flag = false;
+              break;
+            }
+            if (number > 2) {
+                if (number % i === 0) {
+                    flag = false;
+                    break;
+                }
+            }
+        }  return flag;
+    }
+
+    function displayPrime(check) {
+        if (check) {
+            alert("Number is the Prime");
+        } else {
+            alert("Number is not the Prime")
+        }
+    }
+
+    let number1 = prompt("Enter your number");
+    let check = checkPrime(number1)
+    let display = displayPrime(check)
+</script>
+</body>
+</html>

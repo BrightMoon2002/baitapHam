@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành Hàm 1, bài tập 3:</title>
+</head>
+<body>
+<h1>Tìm giá trị nhỏ nhất trong mảng:</h1>
+<script>
+    function checkMinNum(array) {
+        if (array.length === 0) {
+            return -1;
+        }
+            let min = array[0];
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] < min) {
+                    min = array[i]
+                }
+            }
+            return min;
+    }
+
+    let  array1 = [3, 5, 1, 8, -3, 7, 8];
+    let min = checkMinNum(array1);
+    alert(min);
+</script>
+</body>
+</html>

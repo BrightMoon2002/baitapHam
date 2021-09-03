@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành hàm bài tập 5</title>
+</head>
+<body>
+<h1>Chuyển đổi giữa feet và meters</h1>
+<button onclick="displayFeet()">Conver to meters</button>
+<button onclick="displayMeters()">Conver to feet</button>
+<script>
+    function changeFeet(meters) {
+        let feet1 = 3.279 * meters;
+        return feet1;
+    }
+
+    function changeMeters(feet2) {
+        let meters2 = 0.305 * feet2;
+        return meters2;
+    }
+
+    function displayFeet() {
+        let m = parseFloat(prompt("Enter your meters:"));
+        result1 = changeFeet(m);
+        alert(result1);
+    }
+
+    function displayMeters() {
+        let f = parseFloat(prompt("Enter your feet"));
+        result2 = changeMeters(f);
+        alert(result2)
+    }
+
+</script>
+</body>
+</html>
